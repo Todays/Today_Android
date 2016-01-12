@@ -17,6 +17,7 @@ public class SplashScreenActivity extends AppCompatActivity implements Animation
     private  Animation animationBounce;
     private static int SPLASH_TIME_OUT = 3000;
     private String TAG = "SplashScreenActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
