@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <integer-array name="home_item_imgs">
+        <item>@drawable/shop</item>
+        <item>@drawable/food</item>
+        <item>@drawable/health</item>
+        <item>@drawable/transport</item>
+
+    </integer-array>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SplashScreenActivity"
+    tools:showIn="@layout/activity_splash_screen">
+
+    <TextView
+        android:id="@+id/textwelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/welcomme"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/h1_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textwelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/to"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/h1_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/texttodays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="TODAY'S WORLD"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/h1_size"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iconImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texttodays"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/splashicon"/>
+
+
+</RelativeLayout>
