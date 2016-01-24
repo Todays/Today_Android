@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+
+    android:padding="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_rounded"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/shopImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/placeholder"
+
+            />
+
+    <RelativeLayout
+        android:id="@+id/rlDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopImage"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/shopName"
+            style="@style/textView_16sp"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:text="Today Store" />
+
+
+        <TextView
+            android:id="@+id/cityText"
+            style="@style/textView_14sp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/shopName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:textColor="@color/colorWhite"
+            android:text="PUNE" />
+
+        <TextView
+            android:id="@+id/addressText"
+            style="@style/textView_14sp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cityText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="0dp"
+            android:textColor="@color/colorWhite"
+            android:text="Amanora Town Hall" />
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

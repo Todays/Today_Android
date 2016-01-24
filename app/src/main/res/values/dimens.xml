@@ -1,10 +1,67 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--Develope by sushil-->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="h1_size">35dp</dimen>
-    <!-- Default screen margins, per the Android Design guidelines. -->
+
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
+
+
+    <dimen name="spacing">5dp</dimen>
+    <dimen name="item_width">150dp</dimen>
+    <dimen name="signup_btn_height">40dp</dimen>
+    <dimen name="signup_line_margin_left_right">60dp</dimen>
+    <dimen name="signup_button_margin_left_right">40dp</dimen>
+    <dimen name="view_height">0.5dp</dimen>
+    <dimen name="signup_editttext_margin_top">14dp</dimen>
+    <dimen name="popup_image_height_width">160dp</dimen>
+    <dimen name="wishlist_image_height">150dp</dimen>
+
+
+    <dimen name="img_margin80dp">80dp</dimen>
+    <dimen name="img_margin85dp">85dp</dimen>
+    <dimen name="img_margin130dp">130dp</dimen>
+    <dimen name="img_margin172dp">172dp</dimen>
+    <dimen name="slide_sub_menu_margin37dp">37dp</dimen>
+    <dimen name="slide_menu_width280dp">280dp</dimen>
+    <dimen name="pop_up_width220dp">220dp</dimen>
+
+    <dimen name="text_v12sp">12sp</dimen>
+    <dimen name="text_v13sp">13sp</dimen>
+    <dimen name="text_v14sp">14sp</dimen>
+    <dimen name="text_v18sp">18sp</dimen>
+    <dimen name="text_v16sp">16sp</dimen>
+    <dimen name="text_v22sp">22sp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="grid_margin6dp">6dp</dimen>
+    <dimen name="text7sp_error">7sp</dimen>
+
+
+
+    <dimen name="text_v8sp">8sp</dimen>
+    <dimen name="text_v10sp">10sp</dimen>
+
+
+    <dimen name="margin2dp">2dp</dimen>
+    <dimen name="margin3dp">3dp</dimen>
+    <dimen name="margin5dp">5dp</dimen>
+    <dimen name="margin6dp">6dp</dimen>
+    <dimen name="margin8dp">8dp</dimen>
+    <dimen name="margin10dp">10dp</dimen>
+    <dimen name="margin15dp">15dp</dimen>
+    <dimen name="slide_drawer440dp">440dp</dimen>
+    <dimen name="btn_height_35dp">35dp</dimen>
+
+
+    <dimen name="img_margin82dp">82dp</dimen>
+    <dimen name="img_margin106dp">106dp</dimen>
+    <dimen name="img_margin140dp">140dp</dimen>
+    <dimen name="img_margin286dp">286dp</dimen>
+
+
+    <dimen name="header_height">200dip</dimen>
+    <dimen name="tabs_height">64dip</dimen>
 </resources>

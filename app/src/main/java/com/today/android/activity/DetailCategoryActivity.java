@@ -11,8 +11,12 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import com.today.android.Listner.RecycleViewClickListner;
 import com.today.android.R;
+import com.today.android.Utils.CommonWork;
+import com.today.android.Utils.TodaysTextView;
 import com.today.android.adapter.DerailcategoryAdaoter;
 import com.today.android.model.CategoryModel;
 
@@ -20,13 +24,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DetailCategoryActivity extends AppCompatActivity {
+public class DetailCategoryActivity extends AppCompatActivity implements RecycleViewClickListner{
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private DerailcategoryAdaoter derailcategoryAdaoter;
     private List<CategoryModel> modelList;
     private StaggeredGridLayoutManager gaggeredGridLayoutManager;
+    private CommonWork commonWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +70,10 @@ public class DetailCategoryActivity extends AppCompatActivity {
         //mRecyclerView.setLayoutManager(gaggeredGridLayoutManager);
 
 
-        derailcategoryAdaoter = new DerailcategoryAdaoter(this,initializeData());
+        derailcategoryAdaoter = new DerailcategoryAdaoter(this,initializeData(),this);
         mRecyclerView.setAdapter(derailcategoryAdaoter);
+        commonWork = new CommonWork();
+
         // specify an adapter (see also next example)
        // mAdapter = new CategoryAdapter(myDataset);
         //mRecyclerView.setAdapter(mAdapter);
@@ -182,4 +189,11 @@ public class DetailCategoryActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void recyclerViewListClicked(View v, int position) {
+        Toast.makeText(this,"My position"+position,Toast.LENGTH_SHORT).show();
+        commonWork.changeActivity(this, ShopActivity.class);
+        overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+
+    }
 }

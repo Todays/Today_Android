@@ -14,4 +14,74 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <!-- Style for TextView -->
+
+    <style name="app_Textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_title</item>
+    </style>
+
+    <style name="textView_12sp" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v12sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+    </style>
+
+    <style name="textViewprices_12sp" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v12sp</item>
+        <item name="android:paddingLeft">@dimen/margin2dp</item>
+        <item name="android:paddingRight">@dimen/margin2dp</item>
+        <item name="android:paddingTop">@dimen/margin2dp</item>
+        <item name="android:paddingBottom">@dimen/margin5dp</item>
+    </style>
+
+    <style name="textView_13sp" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v13sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+    </style>
+
+    <style name="textView_14sp" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v14sp</item>
+    </style>
+
+    <style name="textView_14sp_light_text_color" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v14sp</item>
+        <item name="android:textColor">@color/tc_light</item>
+    </style>
+
+    <style name="textView_16sp" parent="app_Textview">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+    </style>
+
+    <style name="textView_18sp" parent="app_Textview">
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+    </style>
+
+    <style name="textView_12sp_light_gray_background" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v12sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+        <item name="android:background">@color/explist_bg_light_grey</item>
+    </style>
+
+    <style name="textView_14sp_light_gray_background" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v14sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+        <item name="android:background">@color/gray_light</item>
+    </style>
+
+    <style name="textView_12sp_dark_gray_background" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v12sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+        <item name="android:background">@color/gray_dark</item>
+    </style>
+
+    <style name="textView_14sp_dark_gray_background" parent="app_Textview">
+        <item name="android:textSize">@dimen/text_v14sp</item>
+        <item name="android:padding">@dimen/margin5dp</item>
+        <item name="android:background">@color/gray_dark</item>
+    </style>
+
 </resources>

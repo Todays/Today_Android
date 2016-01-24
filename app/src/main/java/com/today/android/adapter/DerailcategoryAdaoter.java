@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.today.android.Listner.RecycleViewClickListner;
 import com.today.android.R;
 import com.today.android.model.CategoryModel;
 
@@ -20,17 +22,18 @@ public class DerailcategoryAdaoter extends  RecyclerView.Adapter<CategoryViewHol
 private List<CategoryModel> categoryModelList;
 
 private Context mContext;
+private RecycleViewClickListner mrecycleViewClickListner;
 
-public DerailcategoryAdaoter(Context context, List<CategoryModel> ItemList) {
+public DerailcategoryAdaoter(Context context, List<CategoryModel> ItemList,RecycleViewClickListner clickListner) {
         this.categoryModelList = ItemList;
         this.mContext = context;
+        this.mrecycleViewClickListner = clickListner;
         }
 
 @Override
-public CategoryViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+public CategoryViewHolder onCreateViewHolder(ViewGroup viewGroup, final int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.customdetailcategory, null);
-        CategoryViewHolder mh = new CategoryViewHolder(v);
-
+        CategoryViewHolder mh = new CategoryViewHolder(v,mrecycleViewClickListner);
         return mh;
         }
 
