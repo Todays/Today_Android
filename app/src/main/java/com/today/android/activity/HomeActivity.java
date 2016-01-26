@@ -15,10 +15,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.today.android.R;
 import com.today.android.adapter.HomeItemAdapter;
 import com.today.android.constant.HomeItems;
+import com.today.android.globallayout.MyFavorite;
+import com.today.android.globallayout.OffersClass;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,20 +32,40 @@ public class HomeActivity extends AppCompatActivity
     private GridView homeGridView;
     private HomeItemAdapter homeItemAdapter;
     private String TAG = "HomeActivity";
-
+    private OffersClass offersClass;
+    private RelativeLayout myfavroiteLayout;
+    private LinearLayout homeMainLayout;
+    private int flagviewChange=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        myfavroiteLayout = (RelativeLayout)findViewById(R.id.myfavlay);
+        homeMainLayout =(LinearLayout)findViewById(R.id.homemainlay);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "My Favorite List", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                MyFavorite myFavorite = new MyFavorite(HomeActivity.this);
+                if (flagviewChange == 0) {
+
+                    homeMainLayout.setVisibility(View.GONE);
+                    myfavroiteLayout.setVisibility(View.VISIBLE);
+                    fab.setImageResource(R.drawable.crossred);
+                    flagviewChange=1;
+                }else {
+                    flagviewChange=0;
+                    homeMainLayout.setVisibility(View.VISIBLE);
+                    myfavroiteLayout.setVisibility(View.GONE);
+                    fab.setImageResource(R.drawable.ic_wishlist_red);
+                }
+
+
             }
         });
 
@@ -63,6 +87,9 @@ public class HomeActivity extends AppCompatActivity
         homeGridView.setOnItemClickListener(this);
         homeItemAdapter = new HomeItemAdapter(this, R.layout.customhomeitem, getItem());
         homeGridView.setAdapter(homeItemAdapter);
+        offersClass = new OffersClass(this);
+
+
 
     }
 

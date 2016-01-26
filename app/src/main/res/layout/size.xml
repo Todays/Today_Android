@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagesize"
+        android:src="@drawable/ic_gray_size_icon"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/imagesize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/text_v18sp"
+        android:textColor="@color/blue_fb"
+        android:id="@+id/sizeheader"
+        android:text="SELECT SIZE"/>
+
+    <LinearLayout
+        android:layout_below="@+id/sizeheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textSize="@dimen/text_v18sp"/>
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textSize="@dimen/text_v18sp"/>
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XS"
+            android:textSize="@dimen/text_v18sp"/>
+
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:textSize="@dimen/text_v18sp"/>
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XL"
+            android:textSize="@dimen/text_v18sp"/>
+        <TextView
+            android:padding="@dimen/margin10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="XXl"
+            android:textSize="@dimen/text_v18sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

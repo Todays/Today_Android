@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_product_detail_activty"
+    android:background="@color/colorWhite"
+    tools:context="com.today.android.activity.ProductDetailActivty">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/custom_indicator"
+        android:layout_below="@+id/slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin3dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+      <RelativeLayout
+          android:id="@+id/productdescription"
+          android:layout_below="@+id/custom_indicator"
+          android:layout_marginTop="@dimen/margin2dp"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/productdescriptionText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_v18sp"
+            android:text="CASIO Men Sports Gear Black Digital Watch Ad164"
+            />
+
+          <RelativeLayout
+              android:id="@+id/priceLayout"
+              android:layout_below="@+id/productdescriptionText"
+              android:layout_width="fill_parent"
+              android:layout_marginTop="5dp"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:id="@+id/actualprice"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/text_v18sp"
+                  android:text="@string/Rs"/>
+
+              <TextView
+                  android:id="@+id/priceafterdiscount"
+                  android:layout_toRightOf="@+id/actualprice"
+                  android:layout_marginLeft="2dp"
+                  android:layout_marginStart="2dp"
+                  android:textSize="@dimen/text_v18sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="222"/>
+
+          </RelativeLayout>
+
+      </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin3dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+        <include layout="@layout/size"></include>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin3dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+        <include layout="@layout/checkavailability"></include>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin3dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+        <include layout="@layout/specification"></include>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin3dp"
+            android:background="@color/colorPrimary">
+
+        </View>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+
+        </View>
+
+    </LinearLayout>
+</ScrollView>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" >
+        <include layout="@layout/bottomlayoutbutton"></include>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/homemainlay"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.today.android.activity.HomeActivity"
+    android:orientation="vertical"
     tools:showIn="@layout/app_bar_base">
 
 
+   <ScrollView
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:fillViewport="true">
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+    <include layout="@layout/offers"></include>
+
     <GridView
+
         android:id="@+id/homeGridView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -27,4 +41,6 @@
         android:focusable="true"
         android:listSelector="@android:color/transparent"
         android:clickable="true"/>
-</RelativeLayout>
+       </LinearLayout>
+   </ScrollView>
+</LinearLayout>

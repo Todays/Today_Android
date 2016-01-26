@@ -23,11 +23,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.today.android.R;
+import com.today.android.Utils.CommonWork;
 
-public class ShopDeatailActivity extends AppCompatActivity {
+public class ShopDeatailActivity extends AppCompatActivity implements View.OnClickListener{
     LinearLayout Linearlayout;
     ScrollView scrollView;
     String collecitionName [] = {"Indian Wear", " Western Wear","Lingeries","Indian Wear", " Western Wear","Lingeries"};
+    private CommonWork commonWork;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class ShopDeatailActivity extends AppCompatActivity {
         });
         
         init();
+        commonWork = new CommonWork();
     }
 
     private void init() {
@@ -175,6 +178,7 @@ public class ShopDeatailActivity extends AppCompatActivity {
 
             }
 
+            lls.setOnClickListener(this);
             scroll.addView(lls);
 
             Linearlayout.addView(scroll);
@@ -203,4 +207,9 @@ public class ShopDeatailActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
+        commonWork.changeActivity(this, ProductDetailActivty.class);
+        overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+    }
 }
